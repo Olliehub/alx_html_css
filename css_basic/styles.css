@@ -1,0 +1,28 @@
+body,main {
+    display: flex
+}
+
+body {
+    flex-direction: column
+    class="works_on_smartphone"
+    color: #D3D3D3
+    background-color: #F5F5F5
+}
+
+main {
+    flex-direction: row
+    flex: auto
+    color: #808080
+    background-color: #F5F5F5 
+}
+
+article {
+    flex: 2
+    overflow-y: auto
+    background-color: #808080
+}
+
+aside {
+    flex: 1
+    overflow-y: auto
+}
