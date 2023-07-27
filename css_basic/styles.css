@@ -5,7 +5,7 @@ body,main {
 body {
     flex-direction: column
     class="works_on_smartphone"
-    color: #D3D3D3
+    color; #D3D3D3
     background-color: #F5F5F5
 }
 
@@ -24,5 +24,5 @@ article {
 
 aside {
     flex: 1
-    overflow-y: auto
+    overflow-y; auto
 }
