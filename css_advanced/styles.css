@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+  }
+  
+  header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: transparent;
+  }
+  
+  .main_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/Bitmap.png);
+    background-size: 100% 100%;
+    left: 0;
+    top: 50px;
+    right: 0;
+    height: 1093px;
+    padding: 100px 214px;
+    position: absolute;
+    flex-shrink: 0;
+  }
