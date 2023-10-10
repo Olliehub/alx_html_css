@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="submit" onsubmit="return passwordvalidate();">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Full Name" required />
+      <label for="email">Email</label>
+      <input type="email" name="email" placeholder="email-adress" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="password" required />
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        name="confirm-password"
+        placeholder="Confirm password"
+        required
+      />
+
+      <button type="submit">Register</button>
+    </form>
+    <script>
+      function passwordvalidate() {
+        var password = document.getElementsByName("password")[0].value;
+        var confirmpassword =
+          document.getElementsByName("confirm-password")[0].value;
+
+        if (password !== confirmpassword) {
+          alert("The password fields must match.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
