@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeedBack form with checkboxes</title>
+  </head>
+  <body>
+    <form method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Full Name" />
+      <label for="email">Email</label>
+      <input type="email" name="email" placeholder="email" />
+
+      <label for="feedback">Feedback</label>
+      <input type="checkbox" name="feedback[]" value="excellent" />Excellent
+      <input type="checkbox" name="feedback[]" value="good" />Good
+      <input type="checkbox" name="feedback[]" value="average" />Average
+      <input type="checkbox" name="feedback[]" value="poor" />Poor
+
+      <label for="upload">Upload File</label>
+      <input type="file" name="upload" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      var check = false;
+
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          var feedbackOptions = document.getElementsByName("feedback[]");
+          var check = false;
+          for (var i = 0; i < feedbackOptions.length; i++) {
+            if (feedbackOptions[i].checked) {
+              check = true;
+              break;
+            }
+          }
+          if (!check) {
+            event.preventDefault();
+            alert("please select at least one feedback option");
+          }
+        });
+    </script>
+  </body>
+</html>
